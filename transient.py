@@ -4,6 +4,7 @@ import sys
 
 def usage():
     print('transient.py DB_USERNAME DB_ADDRESS DB_NAME DB_USER_PASSWORD | Pass database credentials as system arguments.')
+    print('View README.md for more information. USE AT YOUR OWN RISK')
 
 def main(argv):
     if sys.argv[1] == "help":
