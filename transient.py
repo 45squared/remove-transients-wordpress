@@ -10,7 +10,7 @@ DB_USER_PASSWORD = sys.argv[4]
 def usage():
     print('transient.py DB_USERNAME DB_ADDRESS DB_NAME DB_USER_PASSWORD | Pass database credentials as system arguments.')
 
-def mainmethod():
+def mainmethod(argv):
 # Create databse connection
     cnx = mysql.connector.connect(user=DB_USERNAME, host=DB_ADDRESS, database=DB_NAME, password=DB_USER_PASSWORD)
     cursor = cnx.cursor()
@@ -24,4 +24,4 @@ def mainmethod():
     print(now, "Deleted", cursor.rowcount, "lines.")
     cnx.close
 if __name__=='__main__':
-    mainmethod()
+    mainmethod(sys.argv[1:])
