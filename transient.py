@@ -2,16 +2,19 @@ import datetime
 import mysql.connector
 import sys
 
-DB_USERNAME = sys.argv[1]
-DB_ADDRESS = sys.argv[2]
-DB_NAME = sys.argv[3]
-DB_USER_PASSWORD = sys.argv[4]
+
+#DB_USERNAME = sys.argv[1]
+#DB_ADDRESS = sys.argv[2]
+#DB_NAME = sys.argv[3]
+#DB_USER_PASSWORD = sys.argv[4]
 
 def usage():
     print('transient.py DB_USERNAME DB_ADDRESS DB_NAME DB_USER_PASSWORD | Pass database credentials as system arguments.')
 
-def mainmethod(argv):
-    if sys.argv[1] = help:
+def main(argv):
+    if sys.argv[1] == "help":
+        usage()
+    elif sys.argv[1] == "-h":
         usage()
     else:
 # Create databse connection
@@ -27,4 +30,4 @@ def mainmethod(argv):
         print(now, "Deleted", cursor.rowcount, "lines.")
         cnx.close
 if __name__=='__main__':
-    mainmethod(sys.argv[1:])
+    main(sys.argv[1:])
