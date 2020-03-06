@@ -5,12 +5,12 @@ I take no responsibility for this borking out your whole system.
 #################################################
 ##              INSTRUCTIONS                   ##
 #################################################
-1. Open transient.py
-2. Modify the specified options on line 6
-3. Modify the table in line 9 if needed
-4. Save and close
-5. Open transientarchive.py
-6. Modify line 3 to whatever directory you want to store logs into.
+USAGE:
+python3 transients.py DB_USERNAME DB_HOST DB_NAME DB_USER_PASSWORD
+
+
+transientarchive.py will automatically archive your log files. You can modify it as needed.
+Modify line 3 to whatever directory you want to store logs into.
 
 ##################################################
 ##              CREATE A CRON JOB               ##
