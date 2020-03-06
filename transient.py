@@ -2,12 +2,6 @@ import datetime
 import mysql.connector
 import sys
 
-
-#DB_USERNAME = sys.argv[1]
-#DB_ADDRESS = sys.argv[2]
-#DB_NAME = sys.argv[3]
-#DB_USER_PASSWORD = sys.argv[4]
-
 def usage():
     print('transient.py DB_USERNAME DB_ADDRESS DB_NAME DB_USER_PASSWORD | Pass database credentials as system arguments.')
 
@@ -17,6 +11,10 @@ def main(argv):
     elif sys.argv[1] == "-h":
         usage()
     else:
+        DB_USERNAME = sys.argv[1]
+        DB_ADDRESS = sys.argv[2]
+        DB_NAME = sys.argv[3]
+        DB_USER_PASSWORD = sys.argv[4]
 # Create databse connection
         cnx = mysql.connector.connect(user=DB_USERNAME, host=DB_ADDRESS, database=DB_NAME, password=DB_USER_PASSWORD)
         cursor = cnx.cursor()
